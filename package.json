@@ -7,8 +7,10 @@
     "@types/node": "12.11.1",
     "@types/react": "16.9.7",
     "@types/react-dom": "16.9.2",
+    "@types/react-router-dom": "^5.1.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "typescript": "3.6.4"
   },
@@ -16,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync ./build s3://gtr-sample --profile=gtr",
+    "invalidate": "aws cloudfront create-invalidation --profile=gtr --distribution-id E2TOYA36YS3QM5 --paths / /index.html /error.html /service-worker.js /manifest.json /favicon.ico"
   },
   "eslintConfig": {
     "extends": "react-app"
