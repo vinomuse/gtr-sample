@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import './index.scss';
@@ -6,6 +6,7 @@ import './index.scss';
 function Header() {
   return (
     <header className="header">
+      <h1><Link to="/">GTR</Link></h1>
       <ul>
         <li>
           <Link to="/">Home</Link>

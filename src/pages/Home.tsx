@@ -1,8 +1,9 @@
 import React from 'react';
+import GameList from 'components/GameList';
 
 function Home() {
   return (
-    <h2>Home</h2>
+    <GameList />
   )
 }
 

@@ -1,8 +1,16 @@
 import React from 'react';
+import { RouteComponentProps } from 'react-router';
 
-function Detail() {
+interface Props {
+  name: string;
+}
+
+function Detail({ match }: RouteComponentProps<Props>) {
+  
   return (
-    <h2>Detail</h2>
+    <div>
+      Detail {match.params.name}
+    </div>
   )
 }
 
