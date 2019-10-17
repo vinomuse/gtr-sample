@@ -1,16 +1,16 @@
 import { observable, action } from 'mobx';
 
-interface GameInfoItem {
+export interface GameInfoItem {
   id: number;
   title: string;
   name: string;
-  data: string;
+  date: string;
   genre: string[];
   platform: string[];
   intro: string;
   desc: string;
   vLink: string;
-  mains: string;
+  mainss: string;
   img: string[];
 }
 
@@ -24,7 +24,7 @@ export default class GameInfoStore {
 
   @action
   fetchGameInfo = () => {
-    fetch('./data.json')
+    fetch('/api/data.json')
     .then(res => res.json())
     .then(res => {
       this.info = res.data;

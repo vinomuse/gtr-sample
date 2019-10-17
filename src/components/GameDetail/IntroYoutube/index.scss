@@ -1,0 +1,20 @@
+.intro-youtube {
+  width: 100%;
+  background: darken(#667eea, 40%);
+  padding: 3rem;
+  .youtube-container {
+    display: inline-block;
+    vertical-align: middle;
+    iframe {
+      border-radius: 40px;
+    }
+  }
+  .intro {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2rem;
+    p {
+      width: 400px;
+    }
+  }
+}

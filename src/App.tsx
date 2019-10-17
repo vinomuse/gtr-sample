@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import { Home, Detail } from 'pages';
 import Header from 'components/Header';
-
 
 function App() {
   return (
