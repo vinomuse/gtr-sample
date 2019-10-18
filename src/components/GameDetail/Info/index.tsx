@@ -1,6 +1,8 @@
 import React from 'react';
 import { GameInfoItem } from 'stores/gameInfo';
 
+import './index.scss';
+
 interface Props {
   data: GameInfoItem;
 }
@@ -8,11 +10,11 @@ interface Props {
 function Info({ data }: Props) {
   return (
     <div className="info">
-      <div>
+      <div className="overview">
         <h4>Overview</h4>
         <p>{ data && data.desc }</p>
       </div>
-      <div>
+      <div className="screenshot">
         <h4>ScreenShots</h4>
         <ul>
           { 

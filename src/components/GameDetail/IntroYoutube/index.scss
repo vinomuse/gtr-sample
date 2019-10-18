@@ -2,19 +2,53 @@
   width: 100%;
   background: darken(#667eea, 40%);
   padding: 3rem;
+  text-align: center;
   .youtube-container {
     display: inline-block;
     vertical-align: middle;
+    
     iframe {
       border-radius: 40px;
     }
   }
   .intro {
+    text-align: left;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 2rem;
+    margin: 3rem 0 3rem 3rem;
+    color: #fff;
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+    }
+    h3 {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    span {
+      display: inline-block;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
     p {
+      font-size: 1rem;
+      line-height: 1.5;
       width: 400px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 826px) {
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
+  .intro {
+    p {
+      padding-right: 3rem;
     }
   }
 }
