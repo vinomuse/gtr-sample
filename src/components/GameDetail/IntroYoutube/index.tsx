@@ -3,6 +3,7 @@ import YouTube from 'react-youtube';
 import { GameInfoItem } from 'stores/gameInfo';
 
 import './index.scss';
+import Button from 'components/Common/Button';
 
 interface Props {
   data: GameInfoItem;
@@ -29,10 +30,13 @@ function IntroYoutube({ data }: Props) {
         <span>{data && data.date}</span>
         <p>{data && data.intro}</p>
         <div className="btn-group">
-          <button className="btn-sm">Test Requirements</button>
+          {/* <button className="btn-sm">Test Requirements</button>
           <button className="btn-sm">Take a Survey</button>
-          <button className="btn-lg">Play</button>
+          <button className="btn-lg">Play</button> */}
+          <Button type="sm">Test Requirements</Button>
+          <Button type="sm">Take a Survey</Button>
         </div>
+        <Button type="lg">Play</Button>
       </div>
     </div>
   )
